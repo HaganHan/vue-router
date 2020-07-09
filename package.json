@@ -6,7 +6,7 @@
   "scripts": {
     "develop": "vue-cli-service serve",
     "build": "rollup -c",
-    "submit": "npm version patch -m 'publish'; publish"
+    "submit": "npm version patch -m 'publish'; publish;"
   },
   "dependencies": {
     "core-js": "^3.6.5",
