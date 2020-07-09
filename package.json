@@ -1,16 +1,22 @@
 {
-  "name": "vue-router",
+  "name": "@hagan/vue-router",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "main": "dist/bundle.js",
   "scripts": {
     "develop": "vue-cli-service serve",
-    "build": "rollup -c"
+    "build": "rollup -c",
+    "submit": "publish"
   },
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.4",
+    "@babel/preset-env": "^7.10.4",
+    "@rollup/plugin-babel": "^5.0.4",
+    "@rollup/plugin-node-resolve": "^8.1.0",
     "@vue/cli-plugin-babel": "~4.4.0",
     "@vue/cli-plugin-eslint": "~4.4.0",
     "@vue/cli-service": "~4.4.0",
@@ -22,6 +28,8 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-vue": "^6.2.2",
+    "publish": "^0.6.0",
+    "rollup": "^2.21.0",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
