@@ -7,9 +7,9 @@
     "develop": "vue-cli-service serve;",
     "build:webpack": "rm -rf ./dist; vue-cli-service build;",
     "build:rollup": "rm -rf ./dist; rollup -c;",
-    "submit:patch": "npm version patch -m 'publish'; publish;",
-    "submit:minor": "npm version minor -m 'publish'; publish;",
-    "submit:major": "npm version major -m 'publish'; publish;"
+    "submit:patch": "yarn build:rollup; npm version patch -m 'publish'; publish;",
+    "submit:minor": "yarn build:rollup; npm version minor -m 'publish'; publish;",
+    "submit:major": "yarn build:rollup; npm version major -m 'publish'; publish;"
   },
   "dependencies": {
     "core-js": "^3.6.5",
