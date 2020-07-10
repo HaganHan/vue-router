@@ -1,6 +1,6 @@
 # @hagan/vue-router
 
-根据 `vue-router` 源码，自己实现的一个 `vue-router` 库
+`vue-router` 简单版
 
 ## 开发
 
