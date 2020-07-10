@@ -33,6 +33,7 @@
     "eslint-plugin-vue": "^6.2.2",
     "publish": "^0.6.0",
     "rollup": "^2.21.0",
+    "rollup-plugin-uglify": "^6.0.4",
     "vue-template-compiler": "^2.6.11"
   },
   "eslintConfig": {
