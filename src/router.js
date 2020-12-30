@@ -21,13 +21,15 @@ const routes = [
   }
 ]
 
+console.log('1')
 const router = new VueRouter({
   mode: 'history',
   routes
 })
 
 router.beforeEach((to, from, next) => {
-  if (to.path !== '/before') { // 路由守卫
+  console.log(to.path)
+  if (to.path !== '/rita') { // 路由守卫
     next()
   }
 })

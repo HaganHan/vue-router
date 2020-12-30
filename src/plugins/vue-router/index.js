@@ -15,7 +15,20 @@ class VueRouter {
 
     if (options.mode === 'hash') {
       const initCurrent = () => {
-        this.current = window.location.hash.slice(1)
+        const beforeEachCallback = this.beforeEachCallback
+        const target = {
+          path: window.location.hash.slice(1)
+        }
+        const current = {
+          path: ''
+        }
+        const next = () => {
+          this.current = target.path
+        }
+        if (beforeEachCallback instanceof Function) {
+          return beforeEachCallback(target, current, next)
+        }
+        next()
       }
       window.addEventListener('load', initCurrent)
       window.addEventListener('hashchange', initCurrent)
@@ -23,7 +36,20 @@ class VueRouter {
 
     if (options.mode === 'history') {
       const initCurrent = () => {
-        this.current = window.location.pathname
+        const beforeEachCallback = this.beforeEachCallback
+        const current = {
+          path: '/'
+        }
+        const target = {
+          path: window.location.pathname
+        }
+        const next = () => {
+          this.current = target.path
+        }
+        if (beforeEachCallback instanceof Function) {
+          return beforeEachCallback(target, current, next)
+        }
+        next()
       }
       window.addEventListener('load', initCurrent)
       window.addEventListener('popstate', initCurrent)
@@ -32,6 +58,7 @@ class VueRouter {
 
   beforeEach (callback) {
     Vue.util.defineReactive(this, 'beforeEachCallback', callback)
+    console.log('2')
   }
 }
 
