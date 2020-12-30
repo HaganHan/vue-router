@@ -46,9 +46,24 @@ export default {
         event.preventDefault()
       }
       if (this.$router.current === to) return
-      if (mode === 'hash') window.location.hash = href
-      if (mode === 'history') window.history.pushState(null, null, href)
-      this.$router.current = to
+
+      const next = () => {
+        if (mode === 'hash') window.location.hash = href
+        if (mode === 'history') window.history.pushState(null, null, href)
+        this.$router.current = to
+      }
+
+      const beforeEachCallback = this.$router.beforeEachCallback
+      if (beforeEachCallback instanceof Function) {
+        const current = {
+          path: this.$router.current
+        }
+        const target = {
+          path: to
+        }
+        return beforeEachCallback(target, current, next)
+      }
+      next()
     }
 
     return h('a', {

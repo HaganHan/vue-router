@@ -830,6 +830,14 @@
     lodash "^4.17.13"
     to-fast-properties "^2.0.0"
 
+"@hagan/vue-router@^0.1.15":
+  version "0.1.15"
+  resolved "https://registry.yarnpkg.com/@hagan/vue-router/-/vue-router-0.1.15.tgz#0b3b1b23e50991af2e0b8a7b66ca1882c4b48dc2"
+  integrity sha512-Tw6+vCK1QrWOwLs8wsMJ4zEziyFIg73fPnzfxWeH53CvJa84tzO95xjyaQdbITGcRpU+6SlV6iCnucOQiLkooA==
+  dependencies:
+    core-js "^3.6.5"
+    vue "^2.6.11"
+
 "@hapi/address@2.x.x":
   version "2.1.4"
   resolved "https://registry.yarnpkg.com/@hapi/address/-/address-2.1.4.tgz#5d67ed43f3fd41a69d4b9ff7b56e7c0d1d0a81e5"
@@ -4482,6 +4490,11 @@ gzip-size@^5.0.0:
   dependencies:
     duplexer "^0.1.1"
     pify "^4.0.1"
+
+hagan@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/hagan/-/hagan-0.0.1.tgz#7c596007aa8f07b7e96bcf5e194d0d8d264951d6"
+  integrity sha512-BikJ9km0wOV/aBoLcdsAqxS8CCTtxRgH7kCqUlxCfPNqnrRhRMWSknPKRaJa7okV1FmMBhXLTpeDeyMIc6H8Cg==
 
 handle-thing@^2.0.0:
   version "2.0.1"

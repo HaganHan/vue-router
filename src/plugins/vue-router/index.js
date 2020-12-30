@@ -7,6 +7,7 @@ class VueRouter {
   constructor (options) {
     this.options = options
     this.routeMap = []
+    this.callback = null
     options.routes.forEach(route => {
       this.routeMap[route.path] = route.component
     })
@@ -27,6 +28,10 @@ class VueRouter {
       window.addEventListener('load', initCurrent)
       window.addEventListener('popstate', initCurrent)
     }
+  }
+
+  beforeEach (callback) {
+    Vue.util.defineReactive(this, 'beforeEachCallback', callback)
   }
 }
 

@@ -12,7 +12,9 @@
     "submit:major": "yarn build:rollup; npm version major -m 'publish'; publish;"
   },
   "dependencies": {
+    "@hagan/vue-router": "^0.1.15",
     "core-js": "^3.6.5",
+    "hagan": "^0.0.1",
     "vue": "^2.6.11"
   },
   "devDependencies": {
