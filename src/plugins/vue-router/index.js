@@ -20,7 +20,7 @@ class VueRouter {
           path: window.location.hash.slice(1)
         }
         const current = {
-          path: ''
+          path: '/'
         }
         const next = () => {
           this.current = target.path
